@@ -3,6 +3,7 @@ import { Restaurant } from "../restaurant/component";
 import { Layout } from "../layout/component";
 
 export const App = () => {
+  
   return (
     <div className='main'>
       <Layout>
