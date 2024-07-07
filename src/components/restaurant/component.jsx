@@ -3,7 +3,7 @@ import { Menu } from "../menu/component";
 import { Review } from "../review/component";
 
 export const Restaurant = ({ name, id, menu, reviews }) => {
-  const { count, decrement, increment } = useCount();
+  
 
   return (
     <div>
