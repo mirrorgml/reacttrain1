@@ -21,7 +21,7 @@ const useCount = () => {
     const { count, decrement, increment } = useCount();
     return (
       <div>
-        <h4>Add to order: </h4>
+        
             <button onClick={increment}>+</button>
             {count}
             <button onClick={decrement}>-</button>

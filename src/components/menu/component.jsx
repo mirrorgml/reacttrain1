@@ -14,6 +14,7 @@ export const Menu = ({ menu }) => {
                   ))
                   }
               </ul>
+              <h4>Add to order: </h4>
               <Counter  />
           </>)
           ) : (
