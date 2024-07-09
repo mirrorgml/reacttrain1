@@ -1,29 +1,11 @@
-import { useState } from "react";
 
-const useCount = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount((prevState) => prevState < 5 ? prevState + 1 : prevState);
-  };
-  const decrement = () => {
-    setCount((prevState) => prevState > 0 ? prevState - 1 : prevState);
-  };
-
-  return {
-    count,
-    increment,
-    decrement,
-  };
-};
-
-  export const Counter = () => {
-    const { count, decrement, increment } = useCount();
+  export const Counter = ( {value,  decrement, increment}) => {
+    
     return (
       <div>
         
             <button onClick={increment}>+</button>
-            {count}
+            {value}
             <button onClick={decrement}>-</button>
       </div>
     );

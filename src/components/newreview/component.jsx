@@ -5,6 +5,7 @@ const START_DATA = {
     text: "",
     count: 0,
   };
+  const max = 5, min = 0;
 
   function reducer(state, { type, payload }) {
     switch (type) {
@@ -12,8 +13,10 @@ const START_DATA = {
         return { ...START_DATA, name: payload };
       case "setText":
         return { ...state, text: payload };
-      case "setCount":
-        return { ...state, count: payload };
+      case "decCount":
+        return { ...state, count: state.count > min ? state.count - 1 : state.count};
+      case "incCount":
+        return { ...state, count: state.count < max ? state.count + 1 : state.count};
       case "clear":
       case "save":
         return START_DATA;
@@ -52,7 +55,9 @@ const START_DATA = {
           </div>
           <div>
             <span>Raiting</span>
-            <Counter  />
+            <Counter value={count} 
+            increment={() => { dispatch({ type: "incCount"}); }} 
+            decrement={() => { dispatch({ type: "decCount"}); }} />
           </div>
           <button onClick={() => dispatch({ type: "save" })}>Save</button>
           <button onClick={() => dispatch({ type: "clear" })}>Clear</button>

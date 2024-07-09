@@ -1,4 +1,4 @@
-import { Counter } from "../counter/component";
+import { CounterContainer } from "../counter/container";
 export const Menu = ({ menu }) => {
     return (
       <div>
@@ -15,7 +15,7 @@ export const Menu = ({ menu }) => {
                   }
               </ul>
               <h4>Add to order: </h4>
-              <Counter  />
+              <CounterContainer  />
           </>)
           ) : (
               <div></div>
