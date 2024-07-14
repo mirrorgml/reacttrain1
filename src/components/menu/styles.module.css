@@ -1,0 +1,6 @@
+.ulList li::marker {
+  content: '*';
+  
+  background: #61783f;
+  animation: color-change 3s ease-in-out infinite;
+}

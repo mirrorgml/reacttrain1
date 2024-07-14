@@ -1,12 +1,14 @@
+import styles from "./styles.module.css";
+
 export const Review = ({ reviews }) => {
     return (
       <div>
     {reviews.length ? (
         reviews.map((review) => 
-            <div>
-                <div>{review.text}</div>
-                <div className='autors'> autor: {review.user}</div>
-            </div>
+            <ul >
+                <li className={styles.liList}>{review.text}</li>
+                <li className={styles.cleareList}> autor: {review.user}</li>
+            </ul>
         
         )
       ) : (

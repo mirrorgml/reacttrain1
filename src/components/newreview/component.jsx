@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import { Counter } from "../counter/component";
+import styles from './styles.module.css'
 const START_DATA = {
     name: "",
     text: "",
@@ -28,15 +29,15 @@ const START_DATA = {
   const useForm = (initialValue) => {
     return useReducer(reducer, initialValue);
   };
-  
+
   export const Newreview = () => {
     const [form, dispatch] = useForm(START_DATA);
     
     const { name, text, count } = form;
     return (
-        <div>
+        <div className={styles.root}>
           <div>
-            <span>Name</span>
+            <span className={styles.caption}>Name</span>
             <input
           value={name}
           onChange={(event) => {
@@ -45,7 +46,7 @@ const START_DATA = {
         />
           </div>
           <div>
-            <span>Text</span>
+            <span className={styles.caption}>Text</span>
             <textarea
           value={text}
           onChange={(event) => {
@@ -54,13 +55,15 @@ const START_DATA = {
           />
           </div>
           <div>
-            <span>Raiting</span>
+            <span className={styles.caption}>Raiting</span>
             <Counter value={count} 
-            increment={() => { dispatch({ type: "incCount"}); }} 
-            decrement={() => { dispatch({ type: "decCount"}); }} />
+            increment={() => { dispatch({ type: "incCount" }); }} 
+            decrement={() => { dispatch({ type: "decCount" }); }} />
           </div>
-          <button onClick={() => dispatch({ type: "save" })}>Save</button>
-          <button onClick={() => dispatch({ type: "clear" })}>Clear</button>
+          <button className={styles.btnAction}
+           onClick={() => dispatch({ type: "save" })}>Save</button>
+          <button className={styles.btnAction}
+          onClick={() => dispatch({ type: "clear" })}>Clear</button>
         </div>
     );
   }

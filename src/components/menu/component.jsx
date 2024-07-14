@@ -1,4 +1,6 @@
 import { CounterContainer } from "../counter/container";
+import styles from "./styles.module.css";
+
 export const Menu = ({ menu }) => {
     return (
       <div>
@@ -6,7 +8,7 @@ export const Menu = ({ menu }) => {
           menu.map((oMenu) => 
           <>
               <h4>{oMenu.name} - {oMenu.price} </h4>
-              <ul>
+              <ul className={styles.ulList}>
                   {oMenu.ingredients.map((ingredient) => (
                       <li> 
                       <div className='ingridients'>{ingredient}</div>

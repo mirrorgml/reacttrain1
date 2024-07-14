@@ -3,20 +3,15 @@
   margin-left: 1rem;
   margin-top: 1rem;
 }
-.title{
-  font-weight: 400;
-  background-color: #535bf2;
-  color:#fff;
-  font-size: 1.5rem;
-}
+
 .ingridients{
   font-size: 0.75rem;
-  color:#535bf2;
+  color:#61783f;
   margin-left: 0.5rem;
 }
 .autors{
   font-size: 0.75rem;
-  color:#535bf2;
+  color:#61783f;
 }
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
