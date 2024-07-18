@@ -11,9 +11,27 @@
     background-color: #61783f;
   }
 }
-
+.lightTabMame {
+    border-radius: 1.25rem 0.5rem 0.5rem 0rem;
+    padding: 1rem 0.5rem 0.5rem 1.25rem;
+    border: 1px solid  #06919d79;
+    color:  #06919d79;
+  
+    &:disabled{
+      border: 1px solid #06919d79;
+      color: #fff;
+      font-weight: 400;
+      background-color: #06919d79;
+    }
+  }
 .restContainer {
   border-radius: 0.5rem;
   border: 1px solid #61783f;
   background-color: rgba(140, 188, 67, 0.5);
 }
+.lightRestContainer {
+    border-radius: 0.5rem;
+    border: 1px solid #e6f2f379;
+    background-color: #06919d79;
+  }
+  

@@ -2,6 +2,10 @@
     background-color: #ecfdd180;
     padding: 1rem;
   }
+  .lightRoot{
+    background-color: #06919d79;
+    padding: 1rem; 
+  }
   .root > div {
     padding-bottom: 1rem;
     display: flex;
@@ -21,3 +25,15 @@
     color: #d1e4b4;
     background-color: #61783f;
   }
+  .lightBtnAction{
+    border-radius: .25rem .25rem .25rem .25rem;
+    padding: .5rem .5rem .5rem .5rem;
+    border: 1px solid #e6f2f379;
+    color: #06919d79;
+    margin-right: .5rem;
+  }
+  .lightBtnAction:hover{
+    color: #e6f2f379;
+    background-color: #06919d79;
+  }
+  

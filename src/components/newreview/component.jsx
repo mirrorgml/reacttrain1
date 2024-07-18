@@ -1,6 +1,7 @@
-import { useReducer } from "react";
+import { useReducer, useContext } from "react";
 import { Counter } from "../counter/component";
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import { ThemeContext } from "../app/component";
 const START_DATA = {
     name: "",
     text: "",
@@ -34,10 +35,12 @@ const START_DATA = {
     const [form, dispatch] = useForm(START_DATA);
     
     const { name, text, count } = form;
+
+    const themeMode = useContext(ThemeContext);
     return (
-        <div className={styles.root}>
+        <div className={themeMode  === 'light' ? styles.lightRoot : styles.root}>
           <div>
-            <span className={styles.caption}>Name</span>
+            <span className={styles.caption}>Name {themeMode}</span>
             <input
           value={name}
           onChange={(event) => {
@@ -60,9 +63,9 @@ const START_DATA = {
             increment={() => { dispatch({ type: "incCount" }); }} 
             decrement={() => { dispatch({ type: "decCount" }); }} />
           </div>
-          <button className={styles.btnAction}
+          <button className={themeMode  === 'light' ? styles.lightBtnAction : styles.btnAction}
            onClick={() => dispatch({ type: "save" })}>Save</button>
-          <button className={styles.btnAction}
+          <button className={themeMode  === 'light' ? styles.lightBtnAction : styles.btnAction}
           onClick={() => dispatch({ type: "clear" })}>Clear</button>
         </div>
     );

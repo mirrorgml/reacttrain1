@@ -6,6 +6,13 @@
     font-size: 1.5rem;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
+  .lightTitle{
+    font-weight: 400;
+    background-color: #06919d79;
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
   .content{
     margin: 1rem;
   }
