@@ -1,8 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Пока успела только обязательную часть.
+С ошибкой.
+Если кнопки со счетчиком добавлять в меню. к каждому блюду, то число одинаковое в рамках одного ресторана.
+Правильно понимаю, что что бы этого избежать. необлодимо вынести элемент меню в отдельный компонент и там прописать функцию для работы со счетчиком?
+ 

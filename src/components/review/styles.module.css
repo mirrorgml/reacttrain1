@@ -1,0 +1,10 @@
+.liList{
+  
+  /* list-style-image: url(/right-arrow.svg); */
+  list-style-type: '👉';
+  padding-inline-start: 1ch;
+}
+.cleareList{
+  list-style-type: '🤯';
+  padding-inline-start: 1ch;
+}
